@@ -6,7 +6,7 @@ def maxScore(s: str) -> int:
     for i in range(1, len(s)-1):
         if s[i] == '0': curr_score += 1
         else: curr_score -= 1
-        best_score = max(best_score, curr_score)
+        if curr_score > best_score: best_score = curr_score
     return best_score
 
 if __name__ == '__main__':
