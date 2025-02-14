@@ -10,6 +10,8 @@ class Solution:
             right -= bean
         return res
     
+# Add seen set in order to remove duplicate processing and slightly reduce time complexity.
+
 if __name__ == '__main__':
     problem = Solution()
     print(problem.minimumRemoval([4,1,6,5]))
