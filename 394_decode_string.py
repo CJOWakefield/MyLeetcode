@@ -2,7 +2,6 @@ class Solution:
     def decodeString(self, s: str) -> str:
         stack = []
         curr, curr_val = '', 0
-        # if len(s) < 4: return ''
         for char in s:
             if char.isdigit(): curr_val = (curr_val * 10) + int(char)
             elif char == '[':
