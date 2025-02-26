@@ -13,7 +13,7 @@ class Solution:
                 if num < prev: continue
                 counts[num] -= 1
                 if counts[num] == 0: del counts[num]
-                search(curr + [num], num,counts)
+                search(curr + [num], num, counts)
                 counts[num] += 1
 
         search([], float('-inf'), counts)

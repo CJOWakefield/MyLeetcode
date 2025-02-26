@@ -5,8 +5,7 @@ class Solution:
             if len(curr) == k: 
                 res.append(curr)
                 return
-            for num in range(i, n+1):
-                search(num + 1, curr + [num])
+            for num in range(i, n+1): search(num + 1, curr + [num])
 
         search(1, [])
         return res
