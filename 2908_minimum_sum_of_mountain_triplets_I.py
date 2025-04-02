@@ -4,8 +4,9 @@ class Solution:
     def minimumSum(self, nums: List[int]) -> int:
         n = len(nums)
         left, right = [nums[0]] * n, [nums[-1]] * n
-        for i in range(n-1): left[i+1] = min(nums[i], left[i])
-        for i in range(n-2, -1, -1): right[i] = min(nums[i], right[i+1])
+        for i in range(n-1):
+            left[i+1] = min(nums[i], left[i])
+            right[n-2-i] = min(nums[n-2-i], right[n-1-i])
 
         res = float('inf')
         for i in range(1, n-1):
