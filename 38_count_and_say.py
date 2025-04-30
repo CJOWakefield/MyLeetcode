@@ -1,6 +1,5 @@
 class Solution:
     def countAndSay(self, n: int) -> str:
-        
         def convert(val):
             res = []
             curr = 1
